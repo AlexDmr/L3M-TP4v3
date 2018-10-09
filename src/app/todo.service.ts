@@ -7,11 +7,12 @@ import {TodoItemData} from './dataTypes/TodoItemData';
   providedIn: 'root'
 })
 export class TodoService {
+  // BehaviorSubject : on peut publier des infos avec, ici des TodoListData
   private todoListSubject = new BehaviorSubject<TodoListData>( {label: 'TodoList', items: []} );
   constructor() { }
 
-  getTodoListDataObserver(): Observable<TodoListData> {
-    return this.todoListSubject.asObservable();
+  getTodoListDataObservable(): Observable<TodoListData> {
+    return this.todoListSubject.asObservable(); // // Un observable, on peut s'y abonner, on ne peut rien publier avec
   }
 
   setItemsLabel(label: string, ...items: TodoItemData[] ) {
