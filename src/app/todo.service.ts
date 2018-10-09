@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {TodoListData} from './dataTypes/TodoListData';
-import {Observable} from 'rxjs/Observable';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Observable, BehaviorSubject} from 'rxjs';
 import {TodoItemData} from './dataTypes/TodoItemData';
 
 @Injectable({
