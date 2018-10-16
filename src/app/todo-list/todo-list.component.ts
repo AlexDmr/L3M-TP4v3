@@ -17,10 +17,4 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  appendItem(label: string) {
-    this.todoService.appendItems( {
-      
-    } );
-  }
-
 }
